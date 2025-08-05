@@ -168,7 +168,7 @@
     const amount = 99;
 
     document.getElementById("pay-btn").onclick = async () => {
-      const orderResponse = await fetch("http://localhost:3000/create-order", {
+      const orderResponse = await fetch("https://appsail-50030047657.development.catalystappsail.in/create-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ amount })
@@ -187,7 +187,7 @@
           email: email
         },
         handler: function (response) {
-          fetch("http://localhost:3000/payment-success", {
+          fetch("https://appsail-50030047657.development.catalystappsail.in/payment-success", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -208,5 +208,6 @@
     };
   </script>
 </body>
+
 
 </html>
